@@ -11,7 +11,7 @@ export default class MyWeb extends Component {
         super(props)
         const link = props.uri || this.props.navigation.state.params.link;
         this.state = {
-            urlLink: `${link}?fromto=android&token={version: 0.0.1}`,
+            urlLink: `${decodeURIComponent(link)}?fromto=sss&token={"clienttype":"android","version":"5.3.5.test1","clienttoken":"","devicetoken":"AsEhStKgRVcT0KkijIWn4DbrIpNzFj2ij9c43LQKu7Kc"}&iscontent=1`,
         }
         console.log('========',this.state.urlLink)
     }
